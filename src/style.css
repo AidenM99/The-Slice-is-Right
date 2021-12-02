@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  border-bottom: 1px solid yellow;
+}
+
+.nav-elements {
+  display: flex;
+  margin: 0 50px 0 0;
+}
+
+.link {
+  margin: 0 15px;
+  color: #ffffff;
+}
+
+.link:hover {
+  border-bottom: 2px solid yellow;
+}
+
+.nav-elements,
+.link {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.main-heading {
+  margin: 20px 15px 20px 50px;
+  font-size: 3rem;
+}
+
+.sub-heading {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.main-heading,
+.sub-heading {
+  font-family: "Gwendolyn", cursive;
+  color: #ffffff;
+}
+
+.main {
+  background-color: rgb(0, 0, 0, 0.8);
+  max-width: 500px;
+  text-align: center;
+  margin: 250px auto;
+  padding: 10px 20px;
+  border: 1px solid yellow;
+}
+
+.about-us {
+  color: #ffffff;
+}
