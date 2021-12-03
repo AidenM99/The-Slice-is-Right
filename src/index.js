@@ -1,1 +1,4 @@
-import "./style.css"
+import "./style.css";
+import createHeader from "./website";
+
+createHeader();

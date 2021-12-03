@@ -6,7 +6,9 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   background-image: url("background.jpg");
-  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   height: 100vh;
 }
 
@@ -20,6 +22,7 @@ header {
 
 .nav-elements {
   display: flex;
+  align-items: center;
   margin: 0 50px 0 0;
 }
 
@@ -36,6 +39,19 @@ header {
 .link {
   list-style-type: none;
   text-decoration: none;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:focus {
+  outline: none;
 }
 
 .main-heading {
@@ -65,4 +81,14 @@ header {
 
 .about-us {
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .nav-elements > li {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
