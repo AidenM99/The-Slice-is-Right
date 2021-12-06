@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 body {
   margin: 0;
@@ -12,12 +12,18 @@ body {
   height: 100vh;
 }
 
+/***** Header Section *****/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.8);
-  border-bottom: 1px solid yellow;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-bottom: 1px solid red;
+}
+
+.main-heading {
+  margin: 20px 15px 20px 50px;
+  font-size: 3rem;
 }
 
 .nav-elements {
@@ -32,7 +38,7 @@ header {
 }
 
 .link:hover {
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px solid red;
 }
 
 .nav-elements,
@@ -54,9 +60,19 @@ header {
   outline: none;
 }
 
-.main-heading {
-  margin: 20px 15px 20px 50px;
-  font-size: 3rem;
+/***** About Us *****/
+
+.main {
+  background-color: rgb(0, 0, 0, 0.5);
+  max-width: 500px;
+  text-align: center;
+  margin: 250px auto;
+  padding: 10px 20px;
+  border: 1px solid red;
+}
+
+.about-us {
+  color: #ffffff;
 }
 
 .sub-heading {
@@ -66,23 +82,11 @@ header {
 
 .main-heading,
 .sub-heading {
-  font-family: "Gwendolyn", cursive;
+  font-family: "Lobster", cursive;
   color: #ffffff;
 }
 
-.main {
-  background-color: rgb(0, 0, 0, 0.8);
-  max-width: 500px;
-  text-align: center;
-  margin: 250px auto;
-  padding: 10px 20px;
-  border: 1px solid yellow;
-}
-
-.about-us {
-  color: #ffffff;
-}
-
+/***** Media Queries *****/
 @media (max-width: 767px) {
   .nav-elements > li {
     display: none;

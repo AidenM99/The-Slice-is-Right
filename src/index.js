@@ -1,4 +1,4 @@
 import "./style.css";
-import createHeader from "./website";
+import initialiseWebsite from "./website.js";
 
-createHeader();
+initialiseWebsite();

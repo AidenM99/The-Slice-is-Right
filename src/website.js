@@ -1,8 +1,14 @@
-export default function createHeader() {
-  const header = document.createElement("header");
+import loadHome from "./home.js";
 
+export default function initialiseWebsite() {
   const content = document.getElementById("content");
-  content.appendChild(header);
+
+  content.appendChild(createHeader());
+  content.appendChild(loadHome());
+}
+
+function createHeader() {
+  const header = document.createElement("header");
 
   const mainHeading = document.createElement("h1");
   mainHeading.textContent = "The Slice is Right";
@@ -10,6 +16,8 @@ export default function createHeader() {
 
   header.appendChild(mainHeading);
   header.appendChild(createNav());
+
+  return header;
 }
 
 function createNav() {
@@ -23,11 +31,23 @@ function createNav() {
   hamburger.classList.add("hamburger");
   hamburger.innerHTML = "<i class='fas fa-bars'></i>";
 
-  const links = ["Home", "Menu", "About"];
+  const links = ["Home", "Menu", "Contact"];
 
   for (let i = 0; i < 3; i++) {
-    const navLink = document.createElement("li");
+    var navLink = document.createElement("li");
     navLink.innerHTML = "<a class='link' href='#'>" + links[i] + "</a>";
+
+    navLink.addEventListener("click", (e) => {
+      const target = e.target.textContent;
+      if (target === "Home") {
+        loadHome();
+      } else if (target === "Menu") {
+        loadMenu();
+      } else {
+        loadContact();
+      }
+    });
+
     navElements.appendChild(navLink);
   }
 
