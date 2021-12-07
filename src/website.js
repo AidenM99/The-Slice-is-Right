@@ -1,8 +1,12 @@
 import loadHome from "./home.js";
+import loadMenu from "./menu.js";
 
 export default function initialiseWebsite() {
   const content = document.getElementById("content");
 
+  const mainSection = document.createElement("main");
+
+  content.appendChild(mainSection);
   content.appendChild(createHeader());
   content.appendChild(loadHome());
 }
@@ -39,6 +43,7 @@ function createNav() {
 
     navLink.addEventListener("click", (e) => {
       const target = e.target.textContent;
+      changeSection();
       if (target === "Home") {
         loadHome();
       } else if (target === "Menu") {
@@ -55,4 +60,11 @@ function createNav() {
   nav.appendChild(navElements);
 
   return nav;
+}
+
+function changeSection() {
+  const main = document.querySelector("main");
+
+  main.classList.remove("about", "menu");
+  main.innerHTML = "";
 }

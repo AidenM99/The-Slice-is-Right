@@ -9,7 +9,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
 }
 
 /***** Header Section *****/
@@ -24,6 +23,8 @@ header {
 .main-heading {
   margin: 20px 15px 20px 50px;
   font-size: 3rem;
+  font-family: "Lobster", cursive;
+  color: #FFFFFF;
 }
 
 .nav-elements {
@@ -62,11 +63,11 @@ header {
 
 /***** About Us *****/
 
-.main {
+.about {
   background-color: rgb(0, 0, 0, 0.5);
-  max-width: 500px;
   text-align: center;
   margin: 250px auto;
+  max-width: 500px;
   padding: 10px 20px;
   border: 1px solid red;
 }
@@ -80,10 +81,42 @@ header {
   margin: 0;
 }
 
-.main-heading,
 .sub-heading {
   font-family: "Lobster", cursive;
-  color: #ffffff;
+  color: #FFFFFF;
+}
+
+/***** Menu *****/
+.menu {
+  display: grid;
+  grid-gap: 10px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border: 2px solid red;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  text-align: center;
+  margin: 65px auto;
+  padding: 20px 20px;
+}
+
+.menu-item {
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 20px 20px;
+}
+
+.menu-image {
+  width: 50%;
+}
+
+.item-heading {
+  font-family: "Lobster", cursive;
+  margin: 10px 0 0 0;
+}
+
+.item-desc {
+  margin: 5px 0;
 }
 
 /***** Media Queries *****/

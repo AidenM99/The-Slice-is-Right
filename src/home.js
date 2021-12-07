@@ -1,6 +1,6 @@
-/*export default function loadHome() {
-  const main = document.createElement("main");
-  main.classList.add("main");
+export default function loadHome() {
+  const main = document.querySelector("main");
+  main.classList.add("about")
 
   const subHeading = document.createElement("h2");
   subHeading.classList.add("sub-heading");
@@ -17,4 +17,4 @@
   main.appendChild(aboutUs);
 
   return main;
-}*/
+}
