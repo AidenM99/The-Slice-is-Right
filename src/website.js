@@ -1,5 +1,6 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 
 export default function initialiseWebsite() {
   const content = document.getElementById("content");
@@ -7,11 +8,12 @@ export default function initialiseWebsite() {
   const mainSection = document.createElement("main");
 
   content.appendChild(mainSection);
-  content.appendChild(createHeader());
+  content.appendChild(loadHeader());
   content.appendChild(loadHome());
+  content.appendChild(loadFooter());
 }
 
-function createHeader() {
+function loadHeader() {
   const header = document.createElement("header");
 
   const mainHeading = document.createElement("h1");
@@ -19,12 +21,12 @@ function createHeader() {
   mainHeading.classList.add("main-heading");
 
   header.appendChild(mainHeading);
-  header.appendChild(createNav());
+  header.appendChild(loadNav());
 
   return header;
 }
 
-function createNav() {
+function loadNav() {
   const nav = document.createElement("nav");
   nav.classList.add("navbar");
 
@@ -62,9 +64,28 @@ function createNav() {
   return nav;
 }
 
+function loadFooter() {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+
+  const footerIcons = document.createElement("div");
+  footerIcons.classList.add("footer-icons");
+  footerIcons.innerHTML =
+    "<i class='fab fa-facebook-square fa-lg'></i><i class='fab fa-twitter-square fa-lg'></i><i class='fab fa-instagram-square fa-lg'></i>";
+
+  const followUs = document.createElement("h3");
+  followUs.classList.add("follow-us");
+  followUs.textContent = "Follow Us:";
+
+  footer.appendChild(followUs);
+  footer.appendChild(footerIcons);
+
+  return footer;
+}
+
 function changeSection() {
   const main = document.querySelector("main");
 
-  main.classList.remove("about", "menu");
+  main.classList.remove("home", "menu", "contact");
   main.innerHTML = "";
 }

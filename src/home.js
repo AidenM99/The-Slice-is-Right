@@ -1,20 +1,22 @@
 export default function loadHome() {
   const main = document.querySelector("main");
-  main.classList.add("about")
+  main.classList.add("home");
 
   const subHeading = document.createElement("h2");
   subHeading.classList.add("sub-heading");
-  subHeading.textContent = "About Us";
+  subHeading.textContent = "Quality Pizza. Affordable Prices.";
 
-  const aboutUs = document.createElement("p");
-  aboutUs.classList.add("about-us");
-  aboutUs.textContent =
-    "The key to progress is much similar to the key to improving a pizza - the more you put into it, the more you receive in return. return \n...";
-  aboutUs.textContent +=
-    "Our pizza family is as eager for flawlessness today as we were the point at which we originally opened our entryways over 40 years back.";
+  const dateText = document.createElement("p");
+  dateText.classList.add("date-text");
+  dateText.textContent = "Made with Passion Since 1901.";
+
+  const orderButton = document.createElement("button");
+  orderButton.classList.add("order-button");
+  orderButton.textContent = "Order Now!";
 
   main.appendChild(subHeading);
-  main.appendChild(aboutUs);
+  main.appendChild(dateText);
+  main.appendChild(orderButton);
 
   return main;
 }
