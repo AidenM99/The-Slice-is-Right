@@ -14,10 +14,10 @@ export default function loadMenu() {
     "Frutti di Mare",
   ];
 
+  const main = document.querySelector("main");
+  main.classList.add("menu");
+  
   for (let i = 0; i < 10; i++) {
-    const main = document.querySelector("main");
-    main.classList.add("menu");
-
     const menuItem = document.createElement("div");
     menuItem.classList.add("menu-item");
 
