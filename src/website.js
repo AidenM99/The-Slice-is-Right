@@ -1,6 +1,7 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
 import loadContact from "./contact.js";
+import changeSection from "./index.js";
 
 export default function initialiseWebsite() {
   const content = document.getElementById("content");
@@ -33,14 +34,10 @@ function loadNav() {
   const navElements = document.createElement("ul");
   navElements.classList.add("nav-elements");
 
-  const hamburger = document.createElement("button");
-  hamburger.classList.add("hamburger");
-  hamburger.innerHTML = "<i class='fas fa-bars'></i>";
-
   const links = ["Home", "Menu", "Contact"];
 
   for (let i = 0; i < 3; i++) {
-    var navLink = document.createElement("li");
+    const navLink = document.createElement("li");
     navLink.innerHTML = "<a class='link' href='#'>" + links[i] + "</a>";
 
     navLink.addEventListener("click", (e) => {
@@ -58,7 +55,6 @@ function loadNav() {
     navElements.appendChild(navLink);
   }
 
-  navElements.appendChild(hamburger);
   nav.appendChild(navElements);
 
   return nav;
@@ -81,11 +77,4 @@ function loadFooter() {
   footer.appendChild(footerIcons);
 
   return footer;
-}
-
-function changeSection() {
-  const main = document.querySelector("main");
-
-  main.classList.remove("home", "menu", "contact");
-  main.innerHTML = "";
 }

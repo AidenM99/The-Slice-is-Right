@@ -1,3 +1,6 @@
+import loadMenu from "./menu.js";
+import changeSection from "./index.js";
+
 export default function loadHome() {
   const main = document.querySelector("main");
   main.classList.add("home");
@@ -13,6 +16,10 @@ export default function loadHome() {
   const orderButton = document.createElement("button");
   orderButton.classList.add("order-button");
   orderButton.textContent = "Order Now!";
+  orderButton.addEventListener("click", function () {
+    changeSection();
+    loadMenu();
+  });
 
   main.appendChild(subHeading);
   main.appendChild(dateText);

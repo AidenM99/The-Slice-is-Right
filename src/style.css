@@ -105,6 +105,7 @@ header {
   max-width: 450px;
   padding: 10px 20px;
   font-weight: bold;
+  margin: 10px 10px;
 }
 
 .date-text {
@@ -153,7 +154,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   max-width: 600px;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 20px;
   padding: 20px 20px;
 }
 
@@ -191,6 +192,7 @@ header {
   padding: 20px 20px;
   font-weight: bold;
   color: #ffffff;
+  margin: 20px 20px;
 }
 
 .contact-heading {
@@ -212,12 +214,49 @@ header {
 }
 
 /***** Media Queries *****/
-@media (max-width: 767px) {
+@media (max-width: 725px) {
   .nav-elements > li {
-    display: none;
+    margin-bottom: 20px;
   }
 
-  .hamburger {
-    display: block;
+  header {
+    flex-direction: column;
+  }
+
+  .main-heading {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .menu-image {
+    width: 30%;
+  }
+}
+
+@media (max-width: 401px) {
+  .main-heading,
+  .sub-heading {
+    font-size: 2.5rem;
+  }
+
+  .date-text {
+    font-size: 0.8rem;
+  }
+
+  .nav-elements > li {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 361px) {
+  .sub-heading {
+    font-size: 2rem;
   }
 }
