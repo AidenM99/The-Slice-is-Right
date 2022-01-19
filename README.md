@@ -1,4 +1,4 @@
-## Tic Tac Toe
+## The Slice is Right
 
 - Live Demo: https://aidenm99.github.io/The-Slice-is-Right/
 
